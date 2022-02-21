@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    .head
+    {
+    height:100vh;
+    background-image:url('/static/images/carr.jpg') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    .form-control
+    {
+    margin-bottom:8px;
+    font-size:14px;
+    }
+    .form
+    {
+    border-radius:4px;
+    background: rgba(255, 255, 255, 0.8);
+    }
+
+</style>
+<div class="block p-5 head">
+    <div class="col-sm-4 form ">
+        <form method="post" enctype="multipart/form-data">
+            <div class="row p-2  ">
+                <div class="col-sm-12">
+                    {% csrf_token %}
+                    Trip* &nbsp<input type="radio" required name="trip" value="oneway"/> One Way <input type="radio"
+                                                                                                        name="trip"
+                                                                                                        value="twoway">
+                    Return<br/>
+                    Tour* &nbsp<input type="radio" required name="tour" value="City"/> City <input type="radio"
+                                                                                                     name="tour" value="Outstation">
+                    Outstation <input type="radio" name="tour" value="Rentals"> Rentals<br/>
+                    Name*<input type="text" name="name" required class="form-control" placeholder="Enter Your Name"/>
+                    Date Of Journey*<input type="date" name="dob" required class="form-control"
+                                           placeholder="DD/MM/YYYY"/>
+
+                    Mobile No.*<input type="number" name="contact" required class="form-control"
+                                      placeholder="Enter Mobile No."/>
+                    Email*<input type="email" name="email" required class="form-control"
+                                 placeholder="Enter Your Email"/>
+                    variety of motor
+                    <select class="select" required name="vechile">
+                        <option value="car">Car</option>
+                        <option value="bike">Bike</option>
+                        <option value="auto">Auto</option>
+                        <option value="ericksaw">E-ricksaw</option>
+                        <option value="suv">SUV</option>
+                    </select>
+                    </br>
+                    Passenger
+                    <select class="select" required name="pas">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="7">7</option>
+                    </select>
+
+                    </br>
+                    Pin Code*<select class="select" required name="pincode" title="Please Select Your PinCode">
+                        <option selected="selected" hidden value="None">Please Select...</option>
+                        <option value="1">273413</option>
+                        <option value="2">273414</option>
+                        <option value="3">273415</option>
+                        <option value="4">273415</option>
+                        <option value="7">273414</option>
+                    </select><br/>
+                    Full Address*<textarea class="form-control txta" name="message" style="resize:none" required
+                                           placeholder="Enter your Address..."></textarea>
+                    <p class="text-center">WE CALL YOU AFTER SUBMIT TO CONFIRM THE BOOKING</p>
+                    <input type="submit" value="Submit" class="btn btn-warning form-control"/>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+
+{% endblock %}

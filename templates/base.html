@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet"/>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet"/>
+
+    <style>
+
+        .t
+        {
+        min-height:30px;
+        text-align:center;
+        padding-top:3px;
+        background:#f7f7f7;
+        }
+        .ic
+        {
+        color:#7f7f7f;
+        border:1px solid #7f7f7f;
+        height:20px;
+        width:20px;
+        padding:1px;
+        border-radius:2px;
+        }
+        .ic:hover
+        {
+        color:black;
+        border:1px solid black;
+        transition:all ease 1s;
+        transform: rotate(360deg) scale(1.2);
+        }
+        .call
+        {
+        color:#0aa545;
+        border:1px solid #0aa545;
+        height:20px;
+        width:20px;
+        padding:1px;
+        border-radius:10px;
+        }
+        .call:hover
+        {
+        background:#0aa545;
+        color:white;
+
+        }
+        .headre1
+        {
+        min-height=50px;
+        }
+        .menu
+        {
+        min-height:40px;
+        }
+        #menu ul li a
+        {
+        color:white;
+        font-size:17px;
+        }
+
+        .newproduct
+        {
+        min-height:500px;
+
+        }
+        .services
+        {
+        min-height:50px;
+        }
+        .ufooter
+        {
+
+        background:#95d4ea;
+        }
+        .bfooter
+        {
+
+        margin-top:1px;
+        background:#039be5;
+        }
+        .scroll
+        {
+        color:#eba300;
+        text-align:center;
+        font-size:25px;
+        }
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+<div class="row t text-#7f7f7f border-bottom ">
+    <div class="col-sm-4 border-end">
+        <i class="fa fa-phone call fa-spin"></i> +91-9651382969
+        <i class="fa fa-phone call fa-spin"></i> +91-9305331866
+    </div>
+    <div class="col-sm-4 border-end">
+        Book Your <i class="fa fa-envelope-open-o"></i> Ride Instantly
+    </div>
+    <div class="col-sm-4">
+        <a href="#"><i class="fa fa-facebook ic" style="color:#1bb1e4"></i></a>
+        <a href="#"><i class="fa fa-youtube-play ic" style="color:#f70000"></i></a>
+        <a href="#"><i class="fa fa-twitter-square ic" style="color:#1bb1e4"></i></a>
+        <a href="#"><i class="fa fa-whatsapp ic" style="color:#37bf59"></i></a>
+        <a href="#"><i class="fa fa-instagram ic" style="color:#f70000"></i></a>
+    </div>
+</div>
+<div class="row bg-info menu">
+    <div class="col-sm-3">
+        <div class="fs-2">
+            Cab<b style="color:#0e71eb">Booking <i class="fa fa-envelope-open-o"></i></b>
+        </div>
+    </div>
+    <div class="col-sm-8 ps-5 center">
+        <!--start menu -->
+        <nav class="navbar navbar-expand-lg navbar-light" id="menu">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown"
+                        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/user/home"><i
+                                    class="fa fa-home"></i> Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/user/aboutus"><i class="fa fa-info-circle"></i> About Us</a>
+                        </li>
+                        <!--
+                        <li class="nav-item">
+                            <a class="nav-link" href="/user/myprofile"><i class="fa fa-user"></i> My Booking`s</a>
+                        </li>-->
+                        <li class="nav-item">
+                            <a class="nav-link" href="/user/contactus/"><i class="fa fa-phone"></i> Contact Us</a>
+                        </li>
+                        {% if request.session.userid %}
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/user/myprofile"><i class="fa fa-user"></i> My Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/user/logout"><i class="fa fa-user-plus"></i> Logout</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">{{request.session.userid}}</a>
+                        </li>
+
+
+                        {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="/user/signin"><i class="fa fa-user-plus"></i> LogIn</a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--end menu -->
+    </div>
+    <div class="col-sm-2"></div>
+</div>
+
+<!--upper base end-->
+
+<div class=" row content" style="min-height:400px;">
+    <div class="col-sm-12 py-2">
+        {% block content %}
+        {% endblock %}
+    </div>
+</div>
+
+<!--footer base start-->
+
+<!--start services-->
+<div class="row services bg-dark text-dark p-2">
+    <div class="col  text-center">
+        <div class="card">
+            <img src="{% static 'images\cartour1.jpg' %}" style="width:100%; height:200px" class="card-img-top"
+                 alt="...">
+            <div class="card-body">
+                <h2 class="card-text">CITY TAXI</h2>
+                <p class="card-text">
+                    The perfect way to get through your everyday travel needs. City taxis are available 24/7 and
+                    you can book and travel in an instant. With rides starting from as low as Rs. 6/km, you can
+                    choose from a wide range of options! You can also opt to do your bit for the environment
+                    with Ola Share!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col text-center ">
+        <div class="card">
+            <img src="{% static 'images\cartour2.jpg' %}" style="width:100%; height:200px" class="card-img-top"
+                 alt="...">
+            <div class="card-body">
+                <h2 class="card-text">OUTSTATION</h2>
+                <p class="card-text">
+                    The perfect way to get through your everyday travel needs. City taxis are available 24/7 and
+                    you can book and travel in an instant. With rides starting from as low as Rs. 6/km, you can
+                    choose from a wide range of options! You can also opt to do your bit for the environment
+                    with Ola Share!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col  text-center ">
+        <div class="card">
+            <img src="{% static 'images\cartour3.jpg' %}" style="width:100%; height:200px" class="card-img-top"
+                 alt="...">
+            <div class="card-body">
+                <h2 class="card-text">RENTALS</h2>
+                <p class="card-text">
+                    The perfect way to get through your everyday travel needs. City taxis are available 24/7 and
+                    you can book and travel in an instant. With rides starting from as low as Rs. 6/km, you can
+                    choose from a wide range of options! You can also opt to do your bit for the environment
+                    with Ola Share!</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End services-->
+
+<!--start Footer-->
+<div class="row ufooter pt-2">
+    <div class="col-sm-4">
+        <h4>About Us</h4>
+        <p1>It is a long established fact that a reader will be distracted by the readable content
+            of a page when looking at its layout. The point of using Lorem Ipsum is that it has a
+            more-or-less normal distribution of letters, as opposed to using 'Content here, content here',
+            making it look like readable English.
+        </p1>
+    </div>
+    <div class="col-sm-4">
+        <h4><u>Contact</u> Address</h4>
+        <p1><i class="fa fa-home"></i>108,Chandra Niwas<br/>
+            vill:- Bistauli Bujurg<br/>
+            post:- Belipar<br/>
+            dist:- Gorakhpur
+        </p1>
+    </div>
+    <div class="col-sm-4 pb-2">
+        <h1>Cab<b style="color:#0e71eb">Booking <i class="fa fa-envelope-open-o"></i></b></h1>
+        <p1>The world best blogging website</p1>
+    </div>
+</div>
+<div class=" row bfooter text-light bg-dark text-center py-2">
+    <div class="col-sm-6">
+        Develop By : @Atmadev Ram Tripathi
+    </div>
+    <div class="col-sm-6">
+        © Cab<b style="color:#0e71eb">Booking <i class="fa fa-envelope-open-o"></i></b>
+    </div>
+</div>
+<!--End Footer-->
+
+<script>
+
+	(() => {
+    const message = document.querySelector('#message');
+
+    // check if the Geolocation API is supported
+    if (!navigator.geolocation) {
+        message.textContent = `Your browser doesn't support Geolocation`;
+        message.classList.add('error');
+        return;
+    }
+
+    // handle click event
+    const btn = document.querySelector('#show');
+    btn.addEventListener('click', function () {
+        // get the current position
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    });
+
+
+    // handle success case
+    function onSuccess(position) {
+        const {
+            latitude,
+            longitude
+        } = position.coords;
+
+        message.classList.add('success');
+        message.textContent = `Your location: (${latitude},${longitude})`;
+    }
+
+    // handle error case
+    function onError() {
+        message.classList.add('error');
+        message.textContent = `Failed to get your location!`;
+    }
+})();
+
+
+</script>
+
+</body>
+</html>
