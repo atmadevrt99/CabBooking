@@ -19,11 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f332d4da-59a4-4bf5-bbcf-ec5778fcdb8e" name="Default Changelist" comment="final">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blogging/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/blogging/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blogging/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blogging/urls.py" afterDir="false" />
-    </list>
+    <list default="true" id="f332d4da-59a4-4bf5-bbcf-ec5778fcdb8e" name="Default Changelist" comment="COM" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -96,7 +92,21 @@
       <option name="project" value="LOCAL" />
       <updated>1645961037933</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="COM">
+      <created>1646103202245</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1646103202245</updated>
+    </task>
+    <task id="LOCAL-00008" summary="COM">
+      <created>1646103336412</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1646103336412</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -113,7 +123,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="final" />
-    <option name="LAST_COMMIT_MESSAGE" value="final" />
+    <MESSAGE value="COM" />
+    <option name="LAST_COMMIT_MESSAGE" value="COM" />
   </component>
   <component name="WindowStateProjectService">
     <state x="544" y="226" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1645960842282">
@@ -124,13 +135,13 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="561" y="179" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1644159976743" />
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1645961040777">
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2" timestamp="1646103337837">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1645961040777" />
-    <state x="591" y="338" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1645961659497">
+    <state x="361" y="132" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1646103337837" />
+    <state x="591" y="338" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1646103326632">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="591" y="338" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1645961659497" />
+    <state x="591" y="338" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1646103326632" />
   </component>
 </project>
