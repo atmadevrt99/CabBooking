@@ -42,16 +42,15 @@ INSTALLED_APPS = [
     'user',
 ]
 
-MIDDLEWARE = {
+MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-}
+]
 
 ROOT_URLCONF = 'blogging.urls'
 
@@ -83,7 +82,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -122,11 +121,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 #STATIC_DIR=BASE_DIR/'static'
 STATIC_URL = '/static/'
+#STATICFILES_DIRS=[STATIC_DIR]
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
-STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-    # DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-    # Activate Django-Heroku.
-django_heroku.settings(locals())]
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
+
+#DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# Activate Django-Heroku.
+django_heroku.settings(locals())
